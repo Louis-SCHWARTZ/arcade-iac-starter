@@ -7,3 +7,4 @@ Ce dépôt contient **le jeu, et rien pour le déployer** : à vous d'écrire ce
 ## Jouer
 
 Ouvrez `app/index.html` dans un navigateur.
+Les consignes du TP sont dans [TP.md](TP.md).
