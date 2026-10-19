@@ -1,0 +1,142 @@
+:root {
+  --fond: #0b0b1a;
+  --borne: #1c1640;
+  --cadre: #3a2f7a;
+  --neon-rose: #ff3ea5;
+  --neon-cyan: #39e6ff;
+  --neon-jaune: #ffe14d;
+  --texte: #f4f1ff;
+  --texte-doux: #a59fd0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at 50% 0%, #22184d 0%, var(--fond) 70%);
+  color: var(--texte);
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 12px;
+}
+
+.borne {
+  width: 100%;
+  max-width: 560px;
+  background: var(--borne);
+  border: 6px solid var(--cadre);
+  border-radius: 18px 18px 6px 6px;
+  padding: 16px;
+  box-shadow: 0 0 0 4px #000, 0 0 40px rgba(255, 62, 165, 0.25);
+}
+
+.fronton {
+  text-align: center;
+  padding: 8px 0 12px;
+  border-bottom: 4px dashed var(--cadre);
+  margin-bottom: 12px;
+}
+
+.fronton h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 0.3em;
+  color: var(--neon-rose);
+  text-shadow: 0 0 6px var(--neon-rose), 0 0 18px var(--neon-rose);
+}
+
+.sous-titre {
+  margin: 4px 0 0;
+  letter-spacing: 0.5em;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 6px var(--neon-cyan);
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hud div {
+  background: #000;
+  border: 2px solid var(--cadre);
+  padding: 4px 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.etiquette {
+  font-size: 0.7rem;
+  color: var(--texte-doux);
+  letter-spacing: 0.15em;
+}
+
+.hud span:last-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--neon-jaune);
+}
+
+.ecran {
+  position: relative;
+  border: 4px solid #000;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  text-align: center;
+  padding: 12px;
+}
+
+.message.cache { display: none; }
+
+.message p { margin: 6px 0; }
+
+.clignote {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--neon-jaune);
+  animation: clignote 1s steps(2, start) infinite;
+}
+
+.aide {
+  font-size: 0.85rem;
+  color: var(--texte-doux);
+}
+
+@keyframes clignote {
+  to { visibility: hidden; }
+}
+
+.pied {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: var(--texte-doux);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixel Rétro — Casse-briques</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="borne">
+    <header class="fronton">
+      <h1>PIXEL RÉTRO</h1>
+      <p class="sous-titre">CASSE-BRIQUES</p>
+    </header>
+
+    <section class="hud" aria-label="Tableau de bord">
+      <div><span class="etiquette">SCORE</span><span id="score">0</span></div>
+      <div><span class="etiquette">RECORD</span><span id="record">0</span></div>
+      <div><span class="etiquette">NIVEAU</span><span id="niveau">1</span></div>
+      <div><span class="etiquette">VIES</span><span id="vies">3</span></div>
+    </section>
+
+    <div class="ecran">
+      <canvas id="jeu" width="480" height="360" aria-label="Zone de jeu"></canvas>
+      <div id="message" class="message">
+        <p class="clignote">APPUYEZ SUR ESPACE</p>
+        <p class="aide">← → ou souris pour bouger · P pour pause</p>
+      </div>
+    </div>
+
+    <footer class="pied">
+      <span>© Pixel Rétro</span>
+      <span id="version">v1.0</span>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
