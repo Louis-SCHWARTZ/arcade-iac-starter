@@ -235,8 +235,8 @@ Créez un dossier `infra` à la racine du dépôt, puis les cinq fichiers ci-des
 arcade-iac/
 ├── .gitignore
 ├── README.md
-├── TP.md               ← ces consignes (fourni)
-├── app/                  ← le jeu (fourni)
+├── TP.md               
+├── app/                  ← le jeu
 └── infra/
     ├── providers.tf
     ├── variables.tf
