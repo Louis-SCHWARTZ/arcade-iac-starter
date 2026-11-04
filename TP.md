@@ -413,12 +413,12 @@ Un fichier `terraform.tfstate` est apparu dans `infra` : c'est la mémoire de Te
 
 ## Étape 3 : modifier le jeu et redéployer
 
-Le studio veut afficher le nom de la borne dans l'onglet du navigateur. Avec l'IaC, on ne touche pas au conteneur : on modifie le code, on l'enregistre, puis on applique.
+Le studio veut changer le nom de la borne dans l'onglet du navigateur. Avec l'IaC, on ne touche pas au conteneur : on modifie le code, on l'enregistre, puis on applique.
 
 Dans `app/index.html`, remplacez la ligne du titre par :
 
 ```html
-<title>Pixel Rétro : borne accueil</title>
+<title>BRIX | Neon Breaker</title>
 ```
 
 Relisez la modification, puis enregistrez-la :
@@ -440,7 +440,7 @@ terraform plan
 terraform apply
 ```
 
-✅ Attendu : `docker_container.borne["accueil"] must be replaced` et `Plan: 1 to add, 0 to change, 1 to destroy.` Le fichier a changé, donc son empreinte aussi (`# forces replacement`) : Terraform recrée le conteneur avec le nouveau fichier. Après `yes`, rechargez la page avec **Ctrl+F5** : l'onglet affiche le nouveau titre.
+✅ Attendu : `docker_container.borne must be replaced` et `Plan: 1 to add, 0 to change, 1 to destroy.` Le fichier a changé, donc son empreinte aussi (`# forces replacement`) : Terraform recrée le conteneur avec le nouveau fichier. Après `yes`, rechargez la page avec **Ctrl+F5** : l'onglet affiche le nouveau titre.
 
 Le code dans Git et la borne déployée sont identiques : c'est tout l'intérêt de l'IaC.
 
@@ -702,7 +702,7 @@ Votre dépôt GitHub contient désormais tout : n'importe qui peut recréer vos 
 **Les contraintes.**
 
 - Un seul code pour toutes les bornes : pas un fichier ni un bloc par borne.
-- Ajouter une borne `bar` sur le port 8082 ne demande toujours qu'une ligne dans `terraform.tfvars`, et elle affiche son nom sans autre modification.
+- Ajouter une borne `bar` sur le port 8082.
 - Aucune commande `docker` à la main.
 
 **Indices.**
