@@ -1,4 +1,4 @@
-# Pixel Rétro — Casse-briques
+# Pixel Rétro - Casse-briques
 
 Jeu d'arcade en HTML, CSS et JavaScript.
 
