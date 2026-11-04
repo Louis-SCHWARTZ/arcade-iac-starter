@@ -70,17 +70,15 @@ Pour débuter avec Git en français : [Les bases de Git](https://git-scm.com/boo
 
 ## La mission
 
-Le studio fictif **Pixel Rétro** a créé un casse-briques jouable dans le navigateur. L'ancien stagiaire le lançait avec des commandes `docker run` tapées à la main, que personne n'a notées. Votre mission : décrire la borne d'arcade en code avec Terraform, la ranger dans Git, et la déployer en local dans Docker.
+Le studio **Pixel Rétro** a créé un casse-briques jouable dans le navigateur. L'ancien développeur le lançait avec des commandes `docker run` tapées à la main, que personne n'a notées. Votre mission : décrire la borne d'arcade en code avec Terraform, la ranger dans Git, et la déployer en local dans Docker.
 
 **Règle d'or :** on ne crée, ne modifie et ne supprime jamais un conteneur à la main, sauf quand le TP le demande. Tout passe par le code.
-
-À la fin, vous aurez deux bornes qui tournent, un tableau d'honneur qui survit aux mises à jour, et un dépôt GitHub qui permet à n'importe qui de tout recréer.
 
 ## Installer les outils
 
 Il faut un compte GitHub et quatre outils : Git, WSL 2, Docker Desktop et Terraform. Installez-les dans cet ordre et vérifiez chacun avant de passer au suivant.
 
-**Matériel requis :** Windows 10 22H2 ou Windows 11 23H2 minimum, 8 Go de RAM, 10 Go d'espace libre, virtualisation activée dans le BIOS/UEFI. L'installation de WSL demande une fois les droits administrateur : si vous ne les avez pas, appelez l'enseignant.
+**Matériel requis :** Windows 10 22H2 ou Windows 11 23H2 minimum, 8 Go de RAM, 10 Go d'espace libre, virtualisation activée dans le BIOS/UEFI.
 
 Toutes les commandes se tapent dans **PowerShell** (menu Démarrer, tapez « PowerShell »). « PowerShell administrateur » = clic droit sur PowerShell, puis « Exécuter en tant qu'administrateur ».
 
@@ -97,7 +95,7 @@ Créez un compte sur [github.com](https://github.com/signup) si vous n'en avez p
 ```powershell
 git --version
 git config --global user.name "Prénom Nom"
-git config --global user.email "prenom.nom@ecole.fr"
+git config --global user.email "prenom.nom@domain.fr"
 ```
 
 ✅ Attendu : `git version 2.x`.
@@ -122,7 +120,7 @@ wsl --version
 
 1. Téléchargez **Docker Desktop for Windows (x86\_64)** depuis la [documentation Docker](https://docs.docker.com/desktop/setup/install/windows-install/).
 2. Lancez l'installateur, choisissez l'installation **per-user** et laissez cochée l'option WSL 2.
-3. Ouvrez Docker Desktop et acceptez les conditions. Il est gratuit pour un usage éducatif ; aucun compte Docker n'est nécessaire.
+3. Ouvrez Docker Desktop et acceptez les conditions.
 4. Attendez l'indication « Engine running », puis vérifiez :
 
 ```powershell
@@ -134,7 +132,7 @@ docker run --rm hello-world
 
 ### Terraform
 
-1. Téléchargez le zip **Windows AMD64** de Terraform 1.16.6 (version stable au 19 octobre 2026) sur la [page officielle](https://developer.hashicorp.com/terraform/install).
+1. Téléchargez le zip **Windows AMD64** de Terraform sur la [page officielle](https://developer.hashicorp.com/terraform/install).
 2. Créez le dossier `C:\outils\terraform` et extrayez-y `terraform.exe`.
 3. Ajoutez ce dossier à votre PATH, sans droits administrateur :
 
@@ -148,7 +146,7 @@ docker run --rm hello-world
 terraform version
 ```
 
-✅ Attendu : `Terraform v1.16.6 on windows_amd64`.
+✅ Attendu : `Terraform v1.1x.x on windows_amd64`.
 
 ### Éditeur
 
